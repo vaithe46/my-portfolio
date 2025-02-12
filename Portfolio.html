@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Portfolio</title>
+
+  <!-- bootstrap-css-link-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!--boxicon link-->
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header id="header" class=" py-3">
+    <div class="container  d-flex fixed-top  mt-3 justify-content-between align-items-center ">
+      <h1 class="logo m-0">Portfolio</h1>
+
+      <nav>
+        <ul class="nav" id="side-menu">
+          <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+
+          <i class='bx bxs-x-square' id="Menu-icon" onclick="closemenu()"></i>
+
+        </ul>
+
+        <I class="bx bx-menu" id="menu-icon" onclick="openmenu()"></I>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="py-5 bg-black">
+    <div class=" home-container  d-flex  mt-4 align-items-center justify-content-around">
+      <div class="home-section mt-5 pt-5 gap-3">
+        <h2 class="fw-bold m-0">Hello, it's me</h2>
+        <h1 class="display-3 " style="color: aqua;">Vaitheeshwaran.R</h1>
+        <h2 class="lead m-0">And I'm a
+          <span style="--i:2;" data-text="UI/UX Designer">UI/UX Designer </span>
+          <span style="--i:1;" data-text="Frontend Developer">Frontend Developer</span>
+        </h2>
+        <p class="m-0 " style="font-size: medium;">I specialize in creating beautiful and user-friendly designs that bring ideas to life.</p>
+
+
+        <div class="social-icon">
+          <a href="https://wa.me/+91 9578855916" target="_blank"><i id="icon" class='bx bxl-whatsapp'></i></a>
+          <a href="https://www.linkedin.com/in/vaitheeshr-057341253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i id="icon" class='bx bxl-linkedin'></i></a>
+          <a href="https://www.instagram.com/silent_killer_046_?igsh=aDduMnkyY213eHV1" target="-blank"><i id="icon" class='bx bxl-instagram'></i></a>
+          <a href="https://www.github.com/vaithe1234" target="_blank"><i id="icon" class='bx bxl-github'></i></a>
+        </div>
+
+        <button id="button-cv" class="btn btn-outline-info rounded-pill" style=" transition: box-shadow 0.3s ease;">Download CV</button>
+      </div>
+
+      <div class="home-image">
+        <img src="Vaithe Photo-01.jpeg" alt="" style="width:380px; height:380px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-container py-5">
+    <h2 id="headeing" class="about-Container">About <span style="color:aqua">Me</span></h2>
+
+    <div class="about-image">
+      <img src="Vaithe Photo-01.jpeg" alt="" style="width:250px; height:250px;">
+    </div>
+    <div class="container text-center">
+
+      <h2 id="about-heading" class="display-6" style="color:aqua;  font-family: Georgia, 'Times New Roman', Times, serif; ">UI UX Designer</h2>
+      <p class="about-pragra">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam modi odio est in unde
+        pariatur illo dicta voluptatem magni corporis ab facere nisi eos possimus harum hic amet distinctio omnis odit
+        cumque reprehenderit, iusto sapiente vitae. Atque non harum debitis officiis quia nemo nobis labore iusto sint,
+        ea neque ducimus!</p>
+
+      <button id="button" class="btn btn-outline-info rounded-pill" style=" transition: box-shadow 0.3s ease;">Read More</button>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class=" py-5">
+    <div class="container text-center">
+      <h2 id="headeing" class="service-Container mb-5px">Our <span style="color: aqua;">Services</span></h2>
+
+      <div class="service-container">
+
+        <div id="service-box-1" class="service-box">
+          <i class="bx bx-code-alt"></i>
+          <h3>Web development</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, porro. Natus numquam recusandae ipsam
+            rem, illum deleniti tempore debitis id ullam error ad vel quod fugit mollitia quae, sunt iste.</p>
+          <button id="Read-more-1" class="btn btn-outline-info rounded-pill" style="transition: box-shadow 0.3s ease;" onclick="openModel('webModel')">Read More</button>
+           
+        </div>
+
+
+        <div id="service-box-2" class="service-box">
+          <i class="bx bxs-paint"></i>
+          <h3>UI/UX Designer</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, porro. Natus numquam recusandae ipsam
+            rem, illum deleniti tempore debitis id ullam error ad vel quod fugit mollitia quae, sunt iste.</p>
+          <button id="Read-more-2" class="btn btn-outline-info rounded-pill" style=" transition: box-shadow 0.3s ease;"onclick="openModel('uiModel')">Read More</button>
+            
+        </div>
+
+        <div id="service-box-3" class="service-box">
+          <i class='bx bx-palette'></i>
+          <h3>Grapics Designer</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, porro. Natus numquam recusandae ipsam
+            rem, illum deleniti tempore debitis id ullam error ad vel quod fugit mollitia quae, sunt iste.</p>
+          <button id="Read-more-3" class="btn btn-outline-info rounded-pill" style=" transition: box-shadow 0.3s ease;" onclick="openModel('grapicModel')">Read More</button>
+           
+        </div>
+      </div>
+    </div>
+
+    <!--popup--->
+
+    <div class="popup-overlay"></div>
+
+    <div id="webModel" class="popup-box">
+      <h2 class="text-center">i'm a Web Developer</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam suscipit optio delectus incidunt esse quis
+        illum, libero rem cum vero! Accusantium fugit saepe dolor illum voluptatem, a sapiente esse nihil?</p>
+      <button id="ok-button" class="btn btn-outline-info rounded-pill" style=" margin-top: 10rem; width: 5rem; transition: box-shadow 0.3s ease;" onclick="closeModel('webModel')">Ok</button>
+    </div>
+
+    <div id="uiModel" class="popup-box">
+      <h2 class="text-center">i'm a UI/UX Designer</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam suscipit optio delectus incidunt esse quis
+        illum, libero rem cum vero! Accusantium fugit saepe dolor illum voluptatem, a sapiente esse nihil?</p>
+      <button id="ok-button" class="btn btn-outline-info rounded-pill" style="margin-top: 10rem;  width: 5rem; transition: box-shadow 0.3s ease;" onclick="closeModel('uiModel')">Ok</button>
+    </div>
+
+    <div id="grapicModel" class="popup-box">
+      <h2 class="text-center">i'm a Grapics Designer</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam suscipit optio delectus incidunt esse quis
+        illum, libero rem cum vero! Accusantium fugit saepe dolor illum voluptatem, a sapiente esse nihil?</p>
+      <button id="ok-button" class="btn btn-outline-info rounded-pill" style="margin-top: 10rem; width: 5rem; transition: box-shadow 0.3s ease;" onclick="closeModel('grapicModel')">Ok</button>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-5">
+    <div class="container text-center">
+      <h2 id="headeing" class="project-Container">Latest <span style="color:aqua">Projects</span></h2>
+
+      <div class="portfolio-continer">
+        <div id="portfolio-box-1" class="portfolio-box">
+          <img src="programming-background-with-person-working-with-codes-computer.jpg" alt="">
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p><strong>My Porsonal Portfolio</strong> Technologies used: HTML,CSS,JS and Bootstrap</p>
+            <a class="web-btn" href="#" onclick="web()"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+
+        <div id="portfolio-box-2" class="portfolio-box">
+          <img src="representations-user-experience-interface-design.jpg" alt="">
+          <div class="portfolio-layer">
+            <h4>UI Design</h4>
+            <p><strong>Website designs for Various sectors</strong><br> Tools used: Figma for creating UI/UX Designs</p>
+            <a class="ui-btn" href="#" onclick="uidesign()"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+
+        <div id="portfolio-box-3" class="portfolio-box">
+          <img src="still-life-fashion-designer-s-office.jpg" alt="">
+          <div class="portfolio-layer">
+            <h4>Grapics Design</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, eligendi.</p>
+            <a class="grapic-btn" href="#" onclick="grapic()"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 id="headeing" class=" contact-container text-center ">Contact <span style="color: aqua;">Me!</span></h2>
+
+      <from id="ContactForm">
+
+        <div class="contact-1">
+          <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+
+          <input type="email" id="email" name="email" placeholder="Email Address" required>
+        </div>
+
+        <div class="your message">
+          <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        </div>
+
+        <div class="send-btn">
+          <button id="button" button type="submit" class="btn btn-outline-info rounded-pill"
+            style=" transition: box-shadow 0.3s ease;">Send Message</button>
+        </div>
+      </from>
+
+      <div class="follow-me">
+        <h3 class=" text-center  pt-4 " style="font-size: 1.5rem; "> Other Ways to Reach Me:</h3>
+      </div>
+
+      <div class="social-icon text-center">
+        <a href="https://wa.me/+91 9578855916" target="_blank"><i id="icon" class='bx bxl-whatsapp'></i></a>
+        <a href="mailto: you-vaitheesh9578@gmail.com" target="_blank"><i id="icon" class='bx bxs-envelope'></i></a>
+        <a href="https://www.linkedin.com/in/vaitheeshr-057341253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          target="_blank"><i id="icon" class='bx bxl-linkedin'></i></a>
+      </div>
+    </div>
+
+
+
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer id="footer" class="py-3  border-top border-white">
+    <div class="footer-text">
+      <p class="mb-0">Copyright &copy; by Vaitheeshwaran| All Right Reserved.</p>
+    </div>
+
+    <div class="footer-icontop">
+      <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+    </div>
+  </footer>
+
+
+  <!---scroll reveal-->
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!---boostrap--javascript----->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
